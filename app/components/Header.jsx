@@ -43,7 +43,8 @@ export default function Header() {
         />
       )}
       <header className="fixed left-0 right-0 top-0 z-50 px-4 pt-4">
-        <nav className="mx-auto flex h-[78px] max-w-6xl flex-row-reverse items-center justify-between rounded-full border border-white/60 bg-white/55 px-4 shadow-[0_20px_70px_rgba(15,23,42,0.18)] backdrop-blur-2xl md:px-7 dark:border-white/10 dark:bg-white/10">
+        <nav className="mx-auto flex h-[64px] sm:h-[78px] max-w-6xl flex-row-reverse items-center justify-between rounded-full border border-white/60 bg-white/55 px-3 sm:px-4 md:px-7 shadow-[0_10px_40px_rgba(15,23,42,0.12)] sm:shadow-[0_20px_70px_rgba(15,23,42,0.18)] backdrop-blur-2xl dark:border-white/10 dark:bg-white/10">
+          {" "}
           <div className="flex items-center gap-3">
             <div>
               <h1 className="bg-gradient-to-l from-slate-950 via-purple-600 to-blue-600 bg-clip-text text-xl font-black text-transparent md:text-2xl dark:from-white dark:via-purple-200 dark:to-purple-500">
@@ -64,7 +65,6 @@ export default function Header() {
               />
             </div>
           </div>
-
           <div className="flex items-center gap-2 md:gap-3">
             <div
               className="relative"
@@ -80,7 +80,7 @@ export default function Header() {
               </button>
 
               <div
-                className={`absolute right-0 top-[58px] w-[300px] rounded-3xl border border-[var(--surface-border)] bg-white/80 p-5 text-right shadow-[0_25px_80px_rgba(124,58,237,0.22)] backdrop-blur-2xl transition-all duration-300 dark:border-purple-500/20 dark:bg-[#070b1d]/80 ${
+                className={`absolute right-0 top-[58px] w-[300px] rounded-3xl border border-[var(--surface-border)] bg-white/100 p-5 text-right shadow-[0_25px_80px_rgba(124,58,237,0.22)] backdrop-blur-2xl transition-all duration-300 dark:border-purple-500/20 dark:bg-[#070b1d]/100 ${
                   aboutOpen
                     ? "pointer-events-auto translate-y-0 opacity-100"
                     : "pointer-events-none translate-y-3 opacity-0"

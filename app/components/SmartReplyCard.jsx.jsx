@@ -183,21 +183,28 @@ export default function SmartReplyCard({ show = false }) {
 
 function ReplySkeleton() {
   return (
-    <div className="grid gap-3 lg:grid-cols-2">
+    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
       {[1, 2].map((i) => (
         <div
           key={i}
-          className="rounded-2xl border border-[var(--surface-border)] bg-[var(--surface-card)] p-4 dark:border-white/10 dark:bg-white/[0.04]"
+          className="
+        rounded-2xl border border-[var(--surface-border)]
+        bg-[var(--surface-card)]
+        p-4
+        dark:border-white/10 dark:bg-white/[0.04]
+        min-w-0 overflow-hidden
+      "
         >
           <div className="mb-3 flex items-center justify-between gap-2">
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-2 min-w-0">
               <div className="shimmer h-8 w-8 rounded-xl bg-purple-500/15" />
-              <div className="shimmer h-4 w-32 rounded-full bg-white/50 dark:bg-white/10" />
+              <div className="shimmer h-4 w-24 sm:w-32 rounded-full bg-white/50 dark:bg-white/10" />
             </div>
-            <div className="shimmer h-8 w-16 rounded-xl bg-purple-500/15" />
+
+            <div className="shimmer h-8 w-12 sm:w-16 rounded-xl bg-purple-500/15" />
           </div>
 
-          <div className="space-y-2">
+          <div className="space-y-2 min-w-0 overflow-hidden">
             <div className="shimmer h-3 w-full rounded-full bg-white/50 dark:bg-white/10" />
             <div className="shimmer h-3 w-5/6 rounded-full bg-white/50 dark:bg-white/10" />
             <div className="shimmer h-3 w-2/3 rounded-full bg-white/50 dark:bg-white/10" />

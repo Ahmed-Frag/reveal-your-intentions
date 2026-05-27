@@ -13,10 +13,10 @@ export default function Home() {
   const [loadingResult, setLoadingResult] = useState(false);
   const [showResult, setShowResult] = useState(false);
   return (
-    <main className="relative min-h-screen overflow-hidden bg-background text-foreground">
+    <main className="relative min-h-screen overflow-x-hidden bg-background text-foreground">
       <Header />
 
-      <section className="relative z-10 mx-auto flex min-h-screen max-w-7xl flex-col items-center px-5 pt-36 pb-20">
+      <section className="relative z-10 mx-auto flex max-w-7xl flex-col items-center px-4 sm:px-5 pt-36 pb-20">
         <HeroText />
         <IntentInput
           onRelationshipChange={setRelationship}
