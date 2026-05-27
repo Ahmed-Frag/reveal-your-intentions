@@ -1,0 +1,133 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --background: #e7ddff;
+  --foreground: #080b16;
+
+  --surface-main: rgba(236, 228, 255, 0.86);
+  --surface-card: rgba(229, 220, 250, 0.76);
+  --surface-border: rgba(168, 85, 247, 0.18);
+}
+
+.dark {
+  --background: #030712;
+  --foreground: #ffffff;
+
+  --surface-main: rgba(7, 11, 29, 0.75);
+  --surface-card: rgba(255, 255, 255, 0.04);
+  --surface-border: rgba(255, 255, 255, 0.1);
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+  direction: rtl;
+  scroll-behavior: smooth;
+}
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: Arial, Helvetica, sans-serif;
+}
+
+.animate-fade-up {
+  animation: fadeUp 0.9s ease forwards;
+}
+
+.animate-glow {
+  animation: floatGlow 5s ease-in-out infinite;
+}
+
+@keyframes loadingBar {
+  0% {
+    transform: translateX(120%);
+  }
+  100% {
+    transform: translateX(-220%);
+  }
+}
+
+.animate-scan {
+  animation: scan 1.8s ease-in-out infinite;
+}
+
+.animate-loading-bar {
+  animation: loadingBar 1.3s ease-in-out infinite;
+}
+@keyframes shimmer {
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.shimmer {
+  position: relative;
+  overflow: hidden;
+}
+
+.shimmer::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  transform: translateX(100%);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(168, 85, 247, 0.18),
+    transparent
+  );
+  animation: shimmer 1.4s infinite;
+}
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes floatGlow {
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 0.45;
+  }
+  50% {
+    transform: translateY(-18px) scale(1.08);
+    opacity: 0.8;
+  }
+}
+
+@keyframes scan {
+  0% {
+    right: -120px;
+  }
+  100% {
+    right: 110%;
+  }
+}
+@keyframes resultReveal {
+  from {
+    opacity: 0;
+    transform: translateY(28px) scale(0.98);
+    filter: blur(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+}
+
+.animate-result-reveal {
+  animation: resultReveal 0.75s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
