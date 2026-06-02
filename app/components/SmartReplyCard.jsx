@@ -209,7 +209,7 @@ export default function SmartReplyCard({ show = false, result }) {
               <div className="grid gap-3 lg:grid-cols-2">
                 <ReplyBox
                   icon={<MessageSquareText size={17} />}
-                  title="لو هترد كتابة"
+                  title="الرد الجاهز للإرسال"
                   text={current.written}
                   copied={copied === "written"}
                   onCopy={() => copy(current.written, "written")}
@@ -217,7 +217,7 @@ export default function SmartReplyCard({ show = false, result }) {
 
                 <ReplyBox
                   icon={<Mic2 size={17} />}
-                  title="لو هتقوله مباشرة"
+                  title="إذا بتقوله مباشرة"
                   text={current.face}
                   copied={copied === "face"}
                   onCopy={() => copy(current.face, "face")}
