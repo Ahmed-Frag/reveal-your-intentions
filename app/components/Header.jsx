@@ -48,7 +48,7 @@ export default function Header() {
           <div className="flex items-center gap-3">
             <div>
               <h1 className="bg-gradient-to-l from-slate-950 via-purple-600 to-blue-600 bg-clip-text text-xl font-black text-transparent md:text-2xl dark:from-white dark:via-purple-200 dark:to-purple-500">
-                افضح نيتك
+                افضح نيتهم
               </h1>
 
               <p className="mt-1 text-xs text-slate-600 md:text-sm dark:text-slate-300">
@@ -88,7 +88,7 @@ export default function Header() {
               >
                 <div className="mb-3 flex items-center gap-2 text-purple-600 dark:text-purple-300">
                   <Info size={18} />
-                  <h3 className="font-black">عن أداة افضح نيتك</h3>
+                  <h3 className="font-black">عن أداة افضح نيتهم</h3>
                 </div>
 
                 <p className="text-sm leading-7 text-slate-700 dark:text-slate-300">
